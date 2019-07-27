@@ -1,6 +1,4 @@
-var trocaImg = document.getElementById("trocar");
-$(trocaImg);
-$(trocaImg).css("width","100");
+
 
 
 function relogio (){
@@ -53,10 +51,23 @@ $('.banner_int').slick({
 			  slidesToShow: 1,
 			  adaptiveHeight:true,
 			  autoplay: true,
-			  autoplaySpeed: 2000,
+			  autoplaySpeed: 200000,
 			
 			
 });	
+
+
+$(document).ready(function(){
+	$('li').hover(function(){
+		$(this).find('.menu1').find('.submenu').slideDown('slow',0);
+		$(this).find('.menu1').find('.submenu1').slideDown('slow',0);
+		$(this).find('.menu1').find('.submenu2').slideDown('slow',0);
+	},function(){
+		$(this).find('.menu1').find('.submenu').slideUp('slow',0);
+		$(this).find('.menu1').find('.submenu1').slideUp('slow',0);
+		$(this).find('.menu1').find('.submenu2').slideUp('slow',0);
+	})
+})
 			
 
 
